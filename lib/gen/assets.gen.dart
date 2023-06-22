@@ -9,6 +9,31 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/Icons/Pencil.png
+  AssetGenImage get pencil => const AssetGenImage('assets/Icons/Pencil.png');
+
+  /// File path: assets/Icons/content.png
+  AssetGenImage get content => const AssetGenImage('assets/Icons/content.png');
+
+  /// File path: assets/Icons/hashtag.png
+  AssetGenImage get hashtag => const AssetGenImage('assets/Icons/hashtag.png');
+
+  /// File path: assets/Icons/home.png
+  AssetGenImage get home => const AssetGenImage('assets/Icons/home.png');
+
+  /// File path: assets/Icons/mic.png
+  AssetGenImage get mic => const AssetGenImage('assets/Icons/mic.png');
+
+  /// File path: assets/Icons/user.png
+  AssetGenImage get user => const AssetGenImage('assets/Icons/user.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [pencil, content, hashtag, home, mic, user];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -19,13 +44,17 @@ class $AssetsImagesGen {
   AssetGenImage get programming =>
       const AssetGenImage('assets/images/programming.png');
 
+  /// File path: assets/images/user.png
+  AssetGenImage get user => const AssetGenImage('assets/images/user.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [a1, programming];
+  List<AssetGenImage> get values => [a1, programming, user];
 }
 
 class Assets {
   Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
