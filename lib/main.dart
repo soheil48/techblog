@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_tech_blog/Splash_screen.dart';
+import 'package:flutter_tech_blog/my_colors.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+        statusBarColor: soildcolors.statusBarcolor,
+        statusBarIconBrightness: Brightness.dark,
+        systemNavigationBarColor: soildcolors.systemNavigationBarIconBrightness,
+        systemNavigationBarIconBrightness: Brightness.dark),
+  );
   runApp(const MyApp());
 }
 

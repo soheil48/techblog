@@ -10,6 +10,9 @@ class soildcolors {
   static const Color submitArticle = Color.fromARGB(255, 209, 209, 209);
   static const Color submitpadcast = Color.fromARGB(255, 246, 246, 246);
   static const Color subtext = Color.fromARGB(255, 197, 197, 197);
+  static const Color statusBarcolor = Color.fromARGB(255, 255, 255, 255);
+  static const Color systemNavigationBarIconBrightness =
+      Color.fromARGB(255, 255, 255, 255);
 }
 
 class gradiantColors {
@@ -22,5 +25,10 @@ class gradiantColors {
   static const List<Color> tag = [
     Color.fromARGB(255, 0, 0, 0),
     Color.fromARGB(255, 68, 68, 68),
+  ];
+  static const List<Color> homePosterCover = [
+    Color.fromARGB(0, 0, 0, 0),
+    Color.fromARGB(195, 72, 20, 88),
+    Color.fromARGB(255, 280, 20, 81),
   ];
 }
