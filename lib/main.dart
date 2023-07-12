@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_tech_blog/view/Splash_screen.dart';
 import 'package:flutter_tech_blog/my_colors.dart';
+import 'package:flutter_tech_blog/view/Splash_screen.dart';
+import 'package:flutter_tech_blog/view/register_intro.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-        statusBarColor: soildcolors.statusBarcolor,
+        statusBarColor: SoildColors.statusBarcolor,
         statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: soildcolors.systemNavigationBarIconBrightness,
+        systemNavigationBarColor: SoildColors.systemNavigationBarIconBrightness,
         systemNavigationBarIconBrightness: Brightness.dark),
   );
   runApp(const MyApp());
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
               fontFamily: 'dana',
               fontSize: 17,
               fontWeight: FontWeight.w700,
-              color: soildcolors.postertitle),
+              color: SoildColors.postertitle),
           bodyLarge: TextStyle(
               fontFamily: 'dana',
               fontSize: 13,
@@ -63,10 +65,23 @@ class MyApp extends StatelessWidget {
               fontFamily: 'dana',
               fontSize: 14,
               fontWeight: FontWeight.w700,
-              color: soildcolors.postersubtitle),
+              color: SoildColors.postersubtitle),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.resolveWith(
+              (states) {
+                if (states.contains(MaterialState.pressed)) {
+                  return SoildColors.seemore;
+                }
+                return SoildColors.primeryColor;
+              },
+            ),
+          ),
         ),
       ),
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

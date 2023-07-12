@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_tech_blog/gen/assets.gen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -5,6 +7,8 @@ import 'package:flutter_tech_blog/view/main_Screen.dart';
 import 'package:flutter_tech_blog/my_colors.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
@@ -12,11 +16,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3)).then(
+    Future.delayed(const Duration(seconds: 3)).then(
       (value) {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-            builder: (context) => MainScreen(),
+            builder: (context) => const MainScreen(),
           ),
         );
       },
@@ -37,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 64,
             ),
             const SpinKitThreeBounce(
-              color: soildcolors.primeryColor,
+              color: SoildColors.primeryColor,
               size: 25.0,
             ),
           ],

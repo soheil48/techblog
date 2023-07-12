@@ -1,8 +1,10 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_tech_blog/my_colors.dart';
 
-class myDivider extends StatelessWidget {
-  const myDivider({
+class MyDivider extends StatelessWidget {
+  const MyDivider({
     super.key,
     required this.size,
   });
@@ -12,8 +14,9 @@ class myDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Divider(
-      color: soildcolors.dvider,
+      color: SoildColors.dvider,
       indent: size.width / 6,
+      endIndent: size.width / 6,
       thickness: 1.5,
     );
   }

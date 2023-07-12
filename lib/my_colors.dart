@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class soildcolors {
+class SoildColors {
   static const Color postersubtitle = Color.fromARGB(200, 255, 255, 255);
   static const Color postertitle = Color.fromARGB(255, 255, 255, 255);
   static const Color colortitle = Color.fromARGB(255, 40, 107, 184);
@@ -19,7 +19,7 @@ class soildcolors {
       Color.fromARGB(255, 255, 255, 255);
 }
 
-class gradiantColors {
+class GradiantColors {
   static const List<Color> bottomNav = [
     Color.fromARGB(255, 68, 4, 87),
     Color.fromARGB(255, 0, 0, 0),

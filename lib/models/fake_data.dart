@@ -108,8 +108,8 @@ List<Blogmodel> bloglist = [
   ),
 ];
 
-List<padcastmodel> padList = [
-  padcastmodel(
+List<Padcastmodel> padList = [
+  Padcastmodel(
       id: 1,
       imageurl:
           'https://deow9bq0xqvbj.cloudfront.net/ep-logo/pbblog14003869/Name_Be_Pedar_wfa92i.jpg',
@@ -118,7 +118,7 @@ List<padcastmodel> padList = [
       writerimageurl: '',
       date: '',
       content: 'content'),
-  padcastmodel(
+  Padcastmodel(
       id: 1,
       imageurl: 'https://tehranpodcast.ir/wp-content/uploads/2020/06/rookh.jpg',
       title: 'رادیو رخ',
@@ -126,7 +126,7 @@ List<padcastmodel> padList = [
       writerimageurl: '',
       date: '',
       content: 'content'),
-  padcastmodel(
+  Padcastmodel(
       id: 1,
       imageurl:
           'https://assets.pippa.io/shows/6242c06098cdb50012b06f11/1658868953567-a176eeb4dfe304405228af57d58eeeb3.jpeg',
@@ -135,7 +135,7 @@ List<padcastmodel> padList = [
       writerimageurl: '',
       date: '',
       content: 'content'),
-  padcastmodel(
+  Padcastmodel(
       id: 1,
       imageurl: 'https://s3.castbox.fm/13/64/b5/e972644e199654c0f90ebd5a68.jpg',
       title: 'رادیو ریشه',

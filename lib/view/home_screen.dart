@@ -1,6 +1,5 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, non_constant_identifier_names, avoid_types_as_parameter_names
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tech_blog/my_String.dart';
 import 'package:flutter_tech_blog/my_colors.dart';
@@ -20,6 +19,7 @@ class homeScreen extends StatelessWidget {
   final Size size;
   final TextTheme texttheme;
   final double bodymargin;
+  // ignore: prefer_typing_uninitialized_variables
   final index;
 
   @override
@@ -131,6 +131,7 @@ class SeeMorePadcast extends StatelessWidget {
     required this.bodymargin,
   });
 
+  // ignore: prefer_typing_uninitialized_variables
   final index;
   final double bodymargin;
 
@@ -142,13 +143,13 @@ class SeeMorePadcast extends StatelessWidget {
         children: [
           ImageIcon(
             AssetImage(Assets.icons.mic.path),
-            color: soildcolors.seemore,
+            color: SoildColors.seemore,
           ),
           const SizedBox(width: 8),
           const Text(
-            myString.viewHotestpadcast,
+            MyString.viewHotestpadcast,
             style: TextStyle(
-              color: soildcolors.seemore,
+              color: SoildColors.seemore,
             ),
           ),
         ],
@@ -199,7 +200,7 @@ class homePageBlogList extends StatelessWidget {
                           foregroundDecoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             gradient: const LinearGradient(
-                              colors: gradiantColors.blogpost,
+                              colors: GradiantColors.blogpost,
                               begin: AlignmentDirectional.bottomCenter,
                               end: Alignment.topCenter,
                             ),
@@ -225,7 +226,7 @@ class homePageBlogList extends StatelessWidget {
                                   ),
                                   const Icon(
                                     Icons.remove_red_eye,
-                                    color: soildcolors.scafoldbg,
+                                    color: SoildColors.scafoldbg,
                                     size: 17,
                                   ),
                                 ],
@@ -261,6 +262,7 @@ class SeeMoreBlog extends StatelessWidget {
     required this.bodymargin,
   });
 
+  // ignore: prefer_typing_uninitialized_variables
   final index;
   final double bodymargin;
 
@@ -272,13 +274,13 @@ class SeeMoreBlog extends StatelessWidget {
         children: [
           ImageIcon(
             AssetImage(Assets.icons.pencil.path),
-            color: soildcolors.seemore,
+            color: SoildColors.seemore,
           ),
           const SizedBox(width: 8),
           const Text(
-            myString.viewHotestBlog,
+            MyString.viewHotestBlog,
             style: TextStyle(
-              color: soildcolors.seemore,
+              color: SoildColors.seemore,
             ),
           )
         ],
@@ -316,9 +318,10 @@ class homepagetaglist extends StatelessWidget {
                   Radius.circular(24),
                 ),
                 gradient: LinearGradient(
-                    colors: gradiantColors.tag,
-                    begin: Alignment.centerRight,
-                    end: Alignment.centerLeft),
+                  colors: GradiantColors.tag,
+                  begin: Alignment.centerRight,
+                  end: Alignment.centerLeft,
+                ),
               ),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(16, 10, 10, 10),
@@ -377,7 +380,7 @@ class homepageposter extends StatelessWidget {
               Radius.circular(16),
             ),
             gradient: LinearGradient(
-                colors: gradiantColors.homePosterCover,
+                colors: GradiantColors.homePosterCover,
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter),
           ),
@@ -408,7 +411,7 @@ class homepageposter extends StatelessWidget {
                       ),
                       const Icon(
                         Icons.remove_red_eye,
-                        color: soildcolors.scafoldbg,
+                        color: SoildColors.scafoldbg,
                         size: 17,
                       ),
                     ],

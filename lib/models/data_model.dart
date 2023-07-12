@@ -25,7 +25,7 @@ class Blogmodel {
   });
 }
 
-class padcastmodel {
+class Padcastmodel {
   int id;
   String imageurl;
   String title;
@@ -34,7 +34,7 @@ class padcastmodel {
   String date;
   String content;
 
-  padcastmodel({
+  Padcastmodel({
     required this.id,
     required this.imageurl,
     required this.title,
