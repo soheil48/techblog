@@ -10,6 +10,15 @@ class MyString {
   static const String myFavtext = 'مقالات مورد علاقه من';
   static const String myFavpadcast = 'پادکست های مورد علاقه';
   static const String logout = 'خروج از حساب کاربری';
+  static const String choosecatgory =
+      'دسته بندی هایی که دوست داری رو انتخاب کن';
+  static const String insertEmail = 'لطفا ایمیلت رو وارد کن';
+  static const String textcontinuebutton = 'ادامه';
+  static const String insertEmailcodeactive = 'کد فعال سازی رو وارد کن';
+  static const String Emailhints = 'techblog@gmail.com';
+  static const String Emailactivehints = '*****';
+  static const String welcomeLogin = '''تبریک میگم ، ایمیل با موفقیت تایید شد
+لطفا اطلاعات ثبت نام رو کامل کن''';
   static const String welcome = '''به تک‌بلاگ خوش اومدی
 
 برای ارسال مطلب و پادکست باید حتما 

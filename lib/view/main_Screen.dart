@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tech_blog/gen/assets.gen.dart';
+import 'package:flutter_tech_blog/my_Conponent.dart';
 import 'package:flutter_tech_blog/my_colors.dart';
 
 import 'Profile_screen.dart';
@@ -14,6 +15,8 @@ class MainScreen extends StatefulWidget {
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
+
+final GlobalKey<ScaffoldState> _key = GlobalKey();
 
 class _MainScreenState extends State<MainScreen> {
   // ignore: non_constant_identifier_names
@@ -29,16 +32,74 @@ class _MainScreenState extends State<MainScreen> {
 
     return SafeArea(
       child: Scaffold(
+        key: _key,
+        drawer: Drawer(
+          backgroundColor: SoildColors.scafoldbg,
+          child: Padding(
+            padding: EdgeInsets.only(right: bodymargin, left: bodymargin),
+            child: ListView(
+              children: [
+                DrawerHeader(
+                  child: Center(
+                    child: Image.asset(Assets.images.a1.path, scale: 7),
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    'پروفایل کاربری',
+                    style: texttheme.labelLarge,
+                  ),
+                ),
+                const Divider(
+                  color: SoildColors.dvider,
+                ),
+                ListTile(
+                  title: Text(
+                    'درباره تک‌بلاگ',
+                    style: texttheme.labelLarge,
+                  ),
+                ),
+                const Divider(
+                  color: SoildColors.dvider,
+                ),
+                ListTile(
+                  title: Text(
+                    'اشتراک گذاری تک بلاگ',
+                    style: texttheme.labelLarge,
+                  ),
+                ),
+                const Divider(
+                  color: SoildColors.dvider,
+                ),
+                ListTile(
+                  title: Text(
+                    'تک‌بلاگ در گیت هاب',
+                    style: texttheme.labelLarge,
+                  ),
+                ),
+                const Divider(
+                  color: SoildColors.dvider,
+                )
+              ],
+            ),
+          ),
+        ),
         backgroundColor: Colors.white,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: SoildColors.scafoldbg,
           elevation: 0,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              const Icon(
-                Icons.menu,
-                color: Colors.black,
+              InkWell(
+                onTap: () {
+                  _key.currentState!.openDrawer();
+                },
+                child: const Icon(
+                  Icons.menu,
+                  color: Colors.black,
+                ),
               ),
               Image.asset(
                 Assets.images.a1.path,
@@ -103,7 +164,7 @@ class BottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: 0,
+      bottom: 8,
       right: 0,
       left: 0,
       child: Container(

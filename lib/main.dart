@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_tech_blog/my_colors.dart';
 import 'package:flutter_tech_blog/view/Splash_screen.dart';
+import 'package:flutter_tech_blog/view/my_cats.dart';
 import 'package:flutter_tech_blog/view/register_intro.dart';
 
 void main() {
@@ -79,9 +80,14 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+        ),
       ),
       // home: SplashScreen(),
-      home: const SplashScreen(),
+      home: mycats(),
     );
   }
 }

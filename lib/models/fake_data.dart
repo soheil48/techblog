@@ -22,6 +22,8 @@ List<HashTags> taglist = [
   HashTags(title: 'C++'),
 ];
 
+List<HashTags> selectedtags = [];
+
 List<Blogmodel> bloglist = [
   Blogmodel(
     id: 0,
