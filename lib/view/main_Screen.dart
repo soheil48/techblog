@@ -2,9 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tech_blog/component/my_colors.dart';
 import 'package:flutter_tech_blog/gen/assets.gen.dart';
-import 'package:flutter_tech_blog/my_Conponent.dart';
-import 'package:flutter_tech_blog/my_colors.dart';
 
 import 'Profile_screen.dart';
 import 'home_screen.dart';

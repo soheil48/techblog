@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_tech_blog/my_colors.dart';
+import 'package:flutter_tech_blog/component/my_colors.dart';
 import 'package:flutter_tech_blog/view/Splash_screen.dart';
 import 'package:flutter_tech_blog/view/my_cats.dart';
 import 'package:flutter_tech_blog/view/register_intro.dart';
