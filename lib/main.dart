@@ -4,16 +4,18 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_tech_blog/component/my_colors.dart';
 import 'package:flutter_tech_blog/view/Splash_screen.dart';
+import 'package:flutter_tech_blog/view/main_Screen.dart';
 import 'package:flutter_tech_blog/view/my_cats.dart';
 import 'package:flutter_tech_blog/view/register_intro.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-        statusBarColor: SoildColors.statusBarcolor,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: SoildColors.systemNavigationBarIconBrightness,
-        systemNavigationBarIconBrightness: Brightness.dark),
+      statusBarColor: SoildColors.statusBarcolor,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: SoildColors.systemNavigationBarIconBrightness,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ),
   );
   runApp(const MyApp());
 }
@@ -87,7 +89,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       // home: SplashScreen(),
-      home: mycats(),
+      home: MainScreen(),
     );
   }
 }

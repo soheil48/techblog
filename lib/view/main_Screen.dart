@@ -2,24 +2,28 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tech_blog/component/api_constant.dart';
+import 'package:flutter_tech_blog/component/my_Conponent.dart';
+import 'package:flutter_tech_blog/component/my_String.dart';
 import 'package:flutter_tech_blog/component/my_colors.dart';
+import 'package:flutter_tech_blog/controller/home_screen_controller.dart';
 import 'package:flutter_tech_blog/gen/assets.gen.dart';
+import 'package:flutter_tech_blog/services/dio_services.dart';
+import 'package:get/get.dart';
+import 'package:share_plus/share_plus.dart';
 
 import 'Profile_screen.dart';
 import 'home_screen.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
-
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-
 final GlobalKey<ScaffoldState> _key = GlobalKey();
 
-class _MainScreenState extends State<MainScreen> {
+class MainScreen extends StatelessWidget {
   // ignore: non_constant_identifier_names
-  var Selectedindexpage = 0;
+  RxInt Selectedindexpage = 0.obs;
+
+  MainScreen({super.key});
+
+  Homescreencontroller homescreencontroller = Get.put(Homescreencontroller());
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
     double bodymargin = size.width / 10;
     // ignore: prefer_typing_uninitialized_variables
     var index;
-
+    homescreencontroller.getHomeItemes();
     return SafeArea(
       child: Scaffold(
         key: _key,
@@ -66,6 +70,9 @@ class _MainScreenState extends State<MainScreen> {
                     'اشتراک گذاری تک بلاگ',
                     style: texttheme.labelLarge,
                   ),
+                  onTap: (() async {
+                    await Share.share(MyString.sharetext);
+                  }),
                 ),
                 const Divider(
                   color: SoildColors.dvider,
@@ -75,6 +82,9 @@ class _MainScreenState extends State<MainScreen> {
                     'تک‌بلاگ در گیت هاب',
                     style: texttheme.labelLarge,
                   ),
+                  onTap: (() {
+                    mylaunchurl(MyString.techblogiturl);
+                  }),
                 ),
                 const Divider(
                   color: SoildColors.dvider,
@@ -114,31 +124,33 @@ class _MainScreenState extends State<MainScreen> {
         body: Stack(
           children: [
             Positioned.fill(
-              child: IndexedStack(
-                index: Selectedindexpage,
-                children: [
-                  homeScreen(
-                    size: size,
-                    texttheme: texttheme,
-                    bodymargin: bodymargin,
-                    index: index,
-                  ),
-                  ProfileScreen(
-                    size: size,
-                    texttheme: texttheme,
-                    bodymargin: bodymargin,
-                    index: index,
-                  ),
-                ],
+              child: Obx(
+                () {
+                  return IndexedStack(
+                    index: Selectedindexpage.value,
+                    children: [
+                      homeScreen(
+                        size: size,
+                        texttheme: texttheme,
+                        bodymargin: bodymargin,
+                        index: index,
+                      ),
+                      ProfileScreen(
+                        size: size,
+                        texttheme: texttheme,
+                        bodymargin: bodymargin,
+                        index: index,
+                      ),
+                    ],
+                  );
+                },
               ),
             ),
             BottomNavigation(
               size: size,
               bodymargin: bodymargin,
               changeScreen: (int value) {
-                setState(() {
-                  Selectedindexpage = value;
-                });
+                Selectedindexpage.value = value;
               },
             ),
           ],
