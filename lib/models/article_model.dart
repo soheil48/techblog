@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_tech_blog/component/api_constant.dart';
 
 class ArticleModel {
   String? id;
@@ -24,7 +25,7 @@ class ArticleModel {
   ArticleModel.fromJeson(Map<String, dynamic> element) {
     id = element["id"];
     title = element["title"];
-    image = element["image"];
+    image = Apiconstant.hostDlurl + element["image"];
     catId = element["cat_id"];
     catName = element["cat_name"];
     author = element["author"];

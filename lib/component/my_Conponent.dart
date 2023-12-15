@@ -1,8 +1,9 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, camel_case_types
 
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_tech_blog/component/my_colors.dart';
 import 'package:flutter_tech_blog/gen/assets.gen.dart';
 import 'package:flutter_tech_blog/models/fake_data.dart';
@@ -79,5 +80,19 @@ mylaunchurl(String url) async {
     await launchUrl(uri);
   } else {
     log('could not launch ${uri.toString()}' as num);
+  }
+}
+
+class loading extends StatelessWidget {
+  const loading({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const SpinKitFadingCube(
+      color: SoildColors.primeryColor,
+      size: 32.0,
+    );
   }
 }

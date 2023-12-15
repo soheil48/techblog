@@ -24,23 +24,3 @@ class Blogmodel {
     required this.view,
   });
 }
-
-class Padcastmodel {
-  int id;
-  String imageurl;
-  String title;
-  String writer;
-  late String writerimageurl;
-  String date;
-  String content;
-
-  Padcastmodel({
-    required this.id,
-    required this.imageurl,
-    required this.title,
-    required this.writer,
-    required this.writerimageurl,
-    required this.date,
-    required this.content,
-  });
-}

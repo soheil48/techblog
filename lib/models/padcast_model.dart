@@ -1,4 +1,6 @@
-class PadcastModel {
+import 'package:flutter_tech_blog/component/api_constant.dart';
+
+class PodcastModel {
   String? id;
   String? title;
   String? poster;
@@ -9,7 +11,7 @@ class PadcastModel {
   String? status;
   String? createdAt;
 
-  PadcastModel(
+  PodcastModel(
       {required this.id,
       required this.title,
       required this.poster,
@@ -19,10 +21,10 @@ class PadcastModel {
       required this.view,
       required this.createdAt});
 
-  PadcastModel.fromJson(Map<String, dynamic> element) {
+  PodcastModel.fromJson(Map<String, dynamic> element) {
     id = element["id"];
     title = element["title"];
-    poster = element["poster"];
+    poster = Apiconstant.hostDlurl + element["poster"];
     catId = element["cat_id"];
     catName = element["cat_name"];
     author = element["author"];

@@ -32,7 +32,7 @@ class MainScreen extends StatelessWidget {
     double bodymargin = size.width / 10;
     // ignore: prefer_typing_uninitialized_variables
     var index;
-    homescreencontroller.getHomeItemes();
+
     return SafeArea(
       child: Scaffold(
         key: _key,
